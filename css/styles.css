@@ -1,0 +1,116 @@
+/* Main stylesheet */
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 10px;
+	margin: 0;
+}
+
+.slideshow {
+
+}
+
+.slides {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	padding-bottom: 40.625%;  /* maintains aspect ratio of image */
+	overflow: hidden;
+}
+
+.slides > li {
+	width: 100%;
+	padding-top: 40.625%;  /* maintains aspect ratio of image */
+	position: absolute;
+	-webkit-transition: left 0.4s ease-in-out;
+	-moz-transition: left 0.4s ease-in-out;
+	-o-transition: left 0.4s ease-in-out;
+	transition: left 0.4s ease-in-out;
+}
+
+.slides > li > a {
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	z-index: 100;
+}
+
+.slide-caption {
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	padding: 10px;
+	z-index: 200;
+	width: 100%;
+}
+
+
+[data-image="image1.jpg"] {
+	background: url(../img/background-slider/s/image1.jpg) center no-repeat;
+	background-size: cover;
+}
+
+[data-image="image2.jpg"] {
+	left: 100%;
+	background: url(../img/background-slider/s/image2.jpg) center no-repeat;
+	background-size: cover;
+}
+
+[data-image="image3.jpg"] {
+	left: 200%;
+	background: url(../img/background-slider/s/image3.jpg) center no-repeat;
+	background-size: cover;
+}
+
+[data-image="image4.jpg"] {
+	left: 300%;
+	background: url(../img/background-slider/s/image4.jpg) center no-repeat;
+	background-size: cover;
+}
+
+
+@media screen and (min-width: 600px) {
+	[data-image="image1.jpg"] {
+		background-image: url(../img/background-slider/m/image1.jpg);
+	}
+	
+	[data-image="image2.jpg"] {
+		background-image: url(../img/background-slider/m/image2.jpg);
+	}
+	
+	[data-image="image3.jpg"] {
+		background-image: url(../img/background-slider/m/image3.jpg);
+	}
+	
+	[data-image="image4.jpg"] {
+		background-image: url(../img/background-slider/m/image4.jpg);
+	}
+}
+
+@media screen and (min-width: 900px) {
+	[data-image="image1.jpg"] {
+		background-image: url(../img/background-slider/l/image1.jpg);
+	}
+	
+	[data-image="image2.jpg"] {
+		background-image: url(../img/background-slider/l/image2.jpg);
+	}
+	
+	[data-image="image3.jpg"] {
+		background-image: url(../img/background-slider/l/image3.jpg);
+	}
+	
+	[data-image="image4.jpg"] {
+		background-image: url(../img/background-slider/l/image4.jpg);
+	}	
+}
